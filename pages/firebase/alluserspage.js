@@ -4,26 +4,8 @@ import Layout from '../../components/layout';
 import UserList from '../../components/UserList';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-
-// import * as firebase from 'firebase';
-// import 'firebase/firestore';
-
-const firebase = require('firebase/app');
-require('firebase/firestore');
-
-var config = {
-  apiKey: "AIzaSyBoucAnhK3TCPMaJ5QrNnLlw7-bCjsjyoo",
-    authDomain: "babelasia-37615.firebaseapp.com",
-    databaseURL: "https://babelasia-37615.firebaseio.com",
-    projectId: "babelasia-37615",
-    storageBucket: "babelasia-37615.appspot.com",
-    messagingSenderId: "171899057367",
-    appId: "1:171899057367:web:853f0f7baadebbda24ec92",
-    measurementId: "G-6GSZPHL0NH"
-};
-if (!firebase.apps.length) {
-    firebase.initializeApp(config);
-}
+import {FirebaseConfig} from '../../utils/FirebaseConfig';
+const firebase = FirebaseConfig();
 
 class alluserspage extends React.Component {
 
